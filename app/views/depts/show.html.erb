@@ -6,3 +6,12 @@
 <%= link_to 'Edit Dept', edit_dept_path(@dept) %>
 <br />
 <%= link_to 'Delete Dept', @dept, method: :delete %>
+<%# <%= link_to 'Home Page', dept_path(dept) %> 
+<ul>
+<% @dept.items.each do |item| %>
+<li>
+<p>Name: <%= item.name %></p>
+<p><%= item.body %>
+</li>
+<% end %>
+</ul>

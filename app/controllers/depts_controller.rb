@@ -33,7 +33,7 @@ class DeptsController < ApplicationController
 
   def destroy
     @dept.destroy
-    redirect_to depts_path
+    redirect_to dept_items_path(@dept)
   end
 
   private
@@ -41,7 +41,11 @@ class DeptsController < ApplicationController
       @dept = Dept.find(params[:id])
     end
 
+    def set_item
+      @item = Item.find(params[:id])
+    end
+
     def dept_params
-      params.require(:dept).permit(:name)
+      params.require(:dept).permit(:name, :body)
     end
 end

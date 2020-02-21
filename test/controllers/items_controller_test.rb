@@ -11,13 +11,13 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get shot" do
-    get items_shot_url
+  test "should get show" do
+    get items_show_url
     assert_response :success
   end
 
-  test "should get edit--skip-routes" do
-    get items_edit--skip-routes_url
+  test "should get edit" do
+    get items_edit_url
     assert_response :success
   end
 
