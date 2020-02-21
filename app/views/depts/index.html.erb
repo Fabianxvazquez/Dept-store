@@ -1,0 +1,8 @@
+<h1>Department Store Home</h1>
+<%= link_to 'New Dept', new_dept_path %>
+<%@depts.each do |dept|%>
+<h2> <%= dept.name %><h2>
+<%= link_to "View #{dept.name}", dept_path(dept) %>
+<%= link_to "Edit #{dept.name}", edit_dept_path(dept) %>
+
+<% end %>
